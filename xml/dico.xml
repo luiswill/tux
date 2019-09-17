@@ -1,1 +1,6 @@
-<xml
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionnaire>
+    <mot niveau="4">Beurre</mot>
+    <mot niveau="4">Samuel</mot>
+    <mot niveau="1">Riz</mot>
+</dictionnaire>
