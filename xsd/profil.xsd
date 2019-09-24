@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<schema>
-    <element name="profil" type="Profil" />
+<xs:schema>
+    <xs:element name="profil" type="Profil" />
 
-    <complexType name="Profil">
-        <sequence>
-            <element name="nom" type="string" />
-            <element name="avatar" type="string" />
-            <element name="anniversaire" type="date" />
-            <element name="parties" type="Parties" minOccurs="1" maxOccurs="1" />
-        </sequence>
-    </complexType>
+    <xs:complexType name="Profil">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string" />
+            <xs:element name="avatar" type="xs:string" />
+            <xs:element name="anniversaire" type="xs:date" />
+            <xs:element name="parties" type="Parties" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
 
-    <complexType name="Parties">
-        <sequence>
-            <element name="partie" type="Partie" minOccurs="0" maxOccurs="unbouded" />
-        </sequence>
-    </complexType>
+    <xs:complexType name="Parties">
+        <xs:sequence>
+            <xs:element name="partie" type="Partie" minOccurs="0" maxOccurs="unbouded" />
+        </xs:sequence>
+    </xs:complexType>
 
-    <complexType name="Partie">
-        <attribute name="date" type="date" />
-        <attribute name="trouvé" type="string" />
-        <sequence>
-            <element name="temps" type="DoubleTemps" />
-            <element name="mot" type="Mot" minOccurs="0" maxOccurs="1"/>
-        </sequence>
-    </complexType>
+    <xs:complexType name="Partie">
+        <xs:attribute name="date" type="xs:date" />
+        <xs:attribute name="trouvé" type="xs:string" />
+        <xs:sequence>
+            <xs:element name="temps" type="DoubleTemps" />
+            <xs:element name="mot" type="Mot" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
 
-    <simpleType name="DoubleTemps">
-        <restriction base="double">
-            <minInclusive value="0" />
-        </restriction>
-    </simpleType>
+    <xs:simpleType name="DoubleTemps">
+        <xs:restriction base="xs:double">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
 
-    <simpleType name="Mot" type="string">
-        <attribute name="niveau" type="IntNiveau" />
-        <restriction>
-            <minLength value="3" />
-            <pattern value="([a-zA-Z])*"/>
-        </restriction>
-    </complexType>
+    <xs:simpleType name="Mot" type="xs:string">
+        <xs:attribute name="niveau" type="IntNiveau" />
+        <xs:restriction>
+            <xs:minLength value="3" />
+            <xs:pattern value="([a-zA-Z])*"/>
+        </xs:restriction>
+    </xs:complexType>
 
-    <simpleType name="IntNiveau">
-        <restriction base="int">
-            <minInclusive value="1" />
-            <maxInclusive value="5" />
-        </restriction>
-    </simpleType>
+    <xs:simpleType name="IntNiveau">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="5" />
+        </xs:restriction>
+    </xs:simpleType>
 
-    <simpleType name="temps">
-        <restriction>
-            <minInclusive value="0" />
-        </restriction>
-    </simpleType>
-</schema>
+    <xs:simpleType name="temps">
+        <xs:restriction>
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
