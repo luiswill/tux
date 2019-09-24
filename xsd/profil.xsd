@@ -36,6 +36,7 @@
         <attribute name="niveau" type="IntNiveau" />
         <restriction>
             <minLength value="3" />
+            <pattern value="([a-zA-Z])*"/>
         </restriction>
     </complexType>
 
