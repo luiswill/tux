@@ -42,7 +42,7 @@
 
     <simpleType name="IntNiveau">
         <restriction base="int">
-            <minInclusive value="0" />
+            <minInclusive value="1" />
             <maxInclusive value="5" />
         </restriction>
     </simpleType>

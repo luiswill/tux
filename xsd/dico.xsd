@@ -7,7 +7,7 @@
 
     <complexType name="Dictionnaire">
         <sequence>
-            <element name="mot" type="Mot" minOccurs="3" maxOccurs="unbounded"/>
+            <element name="mot" type="Mot" minOccurs="1" maxOccurs="unbounded"/>
         </sequence>
     </complexType>
 
@@ -21,7 +21,7 @@
 
     <simpleType name="IntNiveau">
         <restriction base="int">
-            <minInclusive value="0"/>
+            <minInclusive value="1"/>
             <maxInclusive value="5"/>
         </restriction>
     </simpleType>
