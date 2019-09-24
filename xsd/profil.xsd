@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <element name="profil" type="Profil" />
+
+    <complexType name="Profil">
+        <sequence>
+            <element name="nom" type="string" />
+            <element name="avatar" type="string" />
+            <element name="anniversaire" type="date" />
+            <element name="parties" type="Parties" minOccurs="1" maxOccurs="1" />
+        </sequence>
+    </complexType>
+
+    <complexType name="Parties">
+        <sequence>
+            <element name="partie" type="Partie" minOccurs="0" maxOccurs="unbouded" />
+        </sequence>
+    </complexType>
+
+    <complexType name="Partie">
+        <attribute name="date" type="date" />
+        <attribute name="trouvé" type="string" />
+        <sequence>
+            <element name="temps" type="DoubleTemps" />
+            <element name="mot" type="Mot" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="DoubleTemps">
+        <restriction base="double">
+            <minInclusive value="0" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Mot" type="string">
+        <attribute name="niveau" type="IntNiveau" />
+        <restriction>
+            <minLength value="3" />
+        </restriction>
+    </complexType>
+
+    <simpleType name="IntNiveau">
+        <restriction base="int">
+            <minInclusive value="0" />
+            <maxInclusive value="5" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="temps">
+        <restriction>
+            <minInclusive value="0" />
+        </restriction>
+    </simpleType>
+</schema>
