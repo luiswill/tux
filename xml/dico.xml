@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dictionnaire>
-    <mot niveau="4">Beurre</mot>
-    <mot niveau="4">Samuel</mot>
-    <mot niveau="1">Riz</mot>
+  <mot niveau="1">Rpg</mot>
+  <mot niveau="1">Dos</mot>
+  <mot niveau="1">Bug</mot>
+  <mot niveau="1">Bit</mot>
+  <mot niveau="1">Html</mot>
+  <mot niveau="1">Java</mot>
+  <mot niveau="2">Linux</mot>
+  <mot niveau="2">Pascal</mot>
+  <mot niveau="2">Disque</mot>
+  <mot niveau="3">Cédérom</mot>
+  <mot niveau="3">Clavier</mot>
+  <mot niveau="3">Mémoire</mot>
+  <mot niveau="3">Support</mot>
+  <mot niveau="3">Fortran</mot>
+  <mot niveau="4">Internet</mot>
+  <mot niveau="4">Moniteur</mot>
+  <mot niveau="4">Hardware</mot>
+  <mot niveau="4">Encodage</mot>
+  <mot niveau="5">Disquette</mot>
+  <mot niveau="5">Robotique</mot>
+  <mot niveau="5">Émulateur</mot>
+  <mot niveau="5">Ordinateur</mot>
 </dictionnaire>
