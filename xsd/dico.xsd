@@ -11,9 +11,9 @@
         </sequence>
     </complexType>
 
-    <simpleType name="Mot" type="string">
+    <simpleType name="Mot">
        <attribute name="niveau" type="IntNiveau"/>
-       <restriction>
+       <restriction base="string">
            <minLength value="3"/>
            <pattern value="([a-zA-Z])*"/>
        </restriction>
