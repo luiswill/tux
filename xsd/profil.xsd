@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema>
-    <xs:element name="profil" type="Profil" />
+<xsd:schema
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">>
+    <xsd:element name="profil" type="Profil" />
 
-    <xs:complexType name="Profil">
-        <xs:sequence>
-            <xs:element name="nom" type="xs:string" />
-            <xs:element name="avatar" type="xs:string" />
-            <xs:element name="anniversaire" type="xs:date" />
-            <xs:element name="parties" type="Parties" minOccurs="1" maxOccurs="1" />
-        </xs:sequence>
-    </xs:complexType>
+    <xsd:complexType name="Profil">
+        <xsd:sequence>
+            <xsd:element name="nom" type="xsd:string" />
+            <xsd:element name="avatar" type="xsd:string" />
+            <xsd:element name="anniversaire" type="xsd:date" />
+            <xsd:element name="parties" type="Parties" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-    <xs:complexType name="Parties">
-        <xs:sequence>
-            <xs:element name="partie" type="Partie" minOccurs="0" maxOccurs="unbouded" />
-        </xs:sequence>
-    </xs:complexType>
+    <xsd:complexType name="Parties">
+        <xsd:sequence>
+            <xsd:element name="partie" type="Partie" minOccurs="0" maxOccurs="unbouded" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-    <xs:complexType name="Partie">
-        <xs:attribute name="date" type="xs:date" />
-        <xs:attribute name="trouvé" type="xs:string" />
-        <xs:sequence>
-            <xs:element name="temps" type="DoubleTemps" />
-            <xs:element name="mot" type="Mot" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
+    <xsd:complexType name="Partie">
+        <xsd:attribute name="date" type="xsd:date" />
+        <xsd:attribute name="trouvé" type="xsd:string" />
+        <xsd:sequence>
+            <xsd:element name="temps" type="DoubleTemps" />
+            <xsd:element name="mot" type="Mot" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
 
-    <xs:simpleType name="DoubleTemps">
-        <xs:restriction base="xs:double">
-            <xs:minInclusive value="0" />
-        </xs:restriction>
-    </xs:simpleType>
+    <xsd:simpleType name="DoubleTemps">
+        <xsd:restriction base="xsd:double">
+            <xsd:minInclusive value="0" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
-    <xs:simpleType name="Mot" type="xs:string">
-        <xs:attribute name="niveau" type="IntNiveau" />
-        <xs:restriction>
-            <xs:minLength value="3" />
-            <xs:pattern value="([a-zA-Z])*"/>
-        </xs:restriction>
-    </xs:complexType>
+    <xsd:simpleType name="Mot" type="xsd:string">
+        <xsd:attribute name="niveau" type="IntNiveau" />
+        <xsd:restriction>
+            <xsd:minLength value="3" />
+            <xsd:pattern value="([a-zA-Z])*"/>
+        </xsd:restriction>
+    </xsd:complexType>
 
-    <xs:simpleType name="IntNiveau">
-        <xs:restriction base="xs:int">
-            <xs:minInclusive value="1" />
-            <xs:maxInclusive value="5" />
-        </xs:restriction>
-    </xs:simpleType>
+    <xsd:simpleType name="IntNiveau">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="5" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
-    <xs:simpleType name="temps">
-        <xs:restriction>
-            <xs:minInclusive value="0" />
-        </xs:restriction>
-    </xs:simpleType>
-</xs:schema>
+    <xsd:simpleType name="temps">
+        <xsd:restriction>
+            <xsd:minInclusive value="0" />
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

@@ -1,33 +1,33 @@
 <?xml version="1.0"?>
-<xs:schema version="1.0"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified">
+<xsd:schema
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
 
-    <xs:element name="dictionnaire" type="Dictionnaire"/>
+    <xsd:element name="dictionnaire" type="Dictionnaire"/>
 
-    <xs:complexType name="Dictionnaire">
-        <xs:sequence>
+    <xsd:complexType name="Dictionnaire">
+        <xsd:sequence>
             <element name="mot" type="Mot" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
+        </xsd:sequence>
+    </xsd:complexType>
 
-    <xs:complexType name="Mot">
-       <xs:attribute name="niveau" type="IntNiveau"/>
-       <xs:restriction base="xs:string">
-           <xs:minLength value="3"/>
-           <xs:pattern value="([a-zA-Z])*"/>
-       </xs:restriction>
-    </xs:complexType>
+    <xsd:complexType name="Mot">
+       <xsd:attribute name="niveau" type="IntNiveau"/>
+       <xsd:restriction base="xsd:string">
+           <xsd:minLength value="3"/>
+           <xsd:pattern value="([a-zA-Z])*"/>
+       </xsd:restriction>
+    </xsd:complexType>
 
-    <xs:complexType name="IntNiveau">
-        <xs:restriction base="xs:int">
-            <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="5"/>
-        </xs:restriction>
-    </xs:complexType>
-
-
+    <xsd:complexType name="IntNiveau">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="5"/>
+        </xsd:restriction>
+    </xsd:complexType>
 
 
 
-</xs:schema>
+
+
+</xsd:schema>
