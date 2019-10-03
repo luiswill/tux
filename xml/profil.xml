@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    Document   : save_example.xml.xml
-    Created on : August 31, 2014, 3:31 PM
-    Author     : Johan Sarrazin / Céline Fouard / Nicolas Glade
-    Description:
-        Purpose of the document follows.
--->
-<profil xsi:schemaLocation="http://myGame/tux ./profil.xsd">
+<include schemaLocation="../xsd/profil.xsd"/>
+<profil>
   <nom>Alban</nom>
   <avatar>conan.jpg</avatar>
   <anniversaire>2006-05-08</anniversaire>
