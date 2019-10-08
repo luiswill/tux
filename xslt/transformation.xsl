@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<stylesheet version="1.0">
-    <output method="dico.xhtml" />
-    <template match="/">
+<xsl:stylesheet xmlns:xls="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="dico.xhtml" />
+    <xsl:template match="/">
         <html>
             <head>
                 <title>Dictionnaire</title>
@@ -12,18 +12,18 @@
 
                 <p>Les mots sont les suivants : </p>
                 <ul>
-                    <apply-templates select="/dictionnaire/mot">
-                        <sort select="./text()" order="descending"/>
-                        <sort select="@niveau" order="ascending" />
-                    </apply-templates>
+                    <xsl:apply-templates select="/dictionnaire/mot">
+                        <xsl:sort select="./text()" order="descending"/>
+                        <xsl:sort select="@niveau" order="ascending" />
+                    </xsl:apply-templates>
                 </ul>
             </body>
         </html>
-    </template>
+    </xsl:template>
 
-    <template match="mot">
+    <xsl:template match="mot">
         <li>
-            <value-of select="./text()" />
+            <xsl:value-of select="./text()" />
         </li>
-    </template>
-</stylesheet>
+    </xsl:template>
+</xsl:stylesheet>
