@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xsl:stylesheet xmlns:xls="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="dico.xhtml" />
     <xsl:template match="/">
         <html>
