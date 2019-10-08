@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<include schemaLocation="../xsd/profil.xsd"/>
-<profil>
+<profil 
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns='http://myGame/tux'
+    xsi:schemaLocation='http://myGame/tux ../xsd/profil.xsd'>
+
   <nom>Alban</nom>
   <avatar>conan.jpg</avatar>
   <anniversaire>2006-05-08</anniversaire>
