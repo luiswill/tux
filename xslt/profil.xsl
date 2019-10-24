@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
     xmlns:tux='http://myGame/tux'>
 >
     <xsl:output method="html" />
@@ -7,10 +7,15 @@
         <html>
             <head>
                 <title>Profil</title>
+                <link>
+                    <xsl:attribute name="href">../css/profil.css</xsl:attribute>
+                    <xsl:attribute name="type">text/css</xsl:attribute>
+                    <xsl:attribute name="rel">stylesheet</xsl:attribute>
+                </link>
             </head>
 
             <body>
-                <h3>Profil de <xsl:value-of select="//tux:nom/text()" />
+                <h3 class="profile-name">Profil de <xsl:value-of select="//tux:nom/text()" />
                 </h3>
                 <p>Anniversaire : <xsl:value-of select="//tux:anniversaire/text()" />
                 </p>
@@ -25,7 +30,7 @@
 
                 <br/>
 
-                <h3>Parties</h3>
+                <h3 class="parties">Parties</h3>
 
                 <xsl:apply-templates select="//tux:partie" />
 
@@ -34,7 +39,7 @@
         </html>
     </xsl:template>
     <xsl:template match="tux:partie">
-        
+
         <b>Date : </b>
         <xsl:value-of select="@date" />
         <b>Trouvé :</b>
